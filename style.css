@@ -141,7 +141,7 @@ iframe {
 }
 
 .modal-content {
-    background-image: url("/images/thank\ you.png");
+    background-image: url("images/thank\ you.png");
     background-repeat: no-repeat;
     background-size: cover;
     margin: auto;
