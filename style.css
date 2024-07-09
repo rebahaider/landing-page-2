@@ -1,53 +1,113 @@
-body {
+* {
     margin: 0;
     padding: 0;
 }
 
 .bg-image {
     background-image: url("images/bgimage.png");
-    height: 1351px;
-    text-align: center;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-position: fixed;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.logo {
+    width: 244px;
+    height: 57px;
+    padding-top: 24px;
 }
 
 .heading {
     color: white;
     font-weight: bold;
-    padding-top: 200px;
+    padding-top: 80px;
     font-size: 30px;
     font-family: comfortaa;
-}
-
-.heading2 {
-    color: #29ABE2;
-    font-family: comfortaa;
-    font-size: 30px;
-    font-weight: bold;
 }
 
 .title {
     color: #2B426B;
     font-weight: 600;
+    width: 1000px;
+    margin: auto;
     text-transform: uppercase;
     font-size: 50px;
     font-family: raleway;
+    line-height: 1.6;
 }
 
-.subTitle {
-    color: white;
-    font-size: 20px;
-    font-family: raleway;
+.video-bg {
+    background-image: url(images/videoBg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-position: fixed;
+    border: 3px solid black;
+    border-radius: 32px;
+    position: relative;
+    width: 994px;
+    height: 627px;
+    margin: auto;
 }
 
-iframe {
+.overlay {
+    background-color: #00000066;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
     border-radius: 30px;
-    border: 2px solid black;
 }
 
-.btn {
+.playBtn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+}
+
+/* Video Popup Styles */
+.video-popup {
+    display: none;
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.video-content {
+    position: relative;
+    margin: auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 700px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.closePlayBtn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.bookBtn {
     text-transform: uppercase;
     border: 1px solid white;
     width: 466px;
@@ -57,11 +117,15 @@ iframe {
     color: white;
     cursor: pointer;
     font-family: raleway;
+    font-size: 13px;
+    font-weight: 500px;
 }
 
-.btn-section {
+.bookBtn-section {
     padding-top: 30px;
+    padding-bottom: 80px;
 }
+
 
 /* white section */
 .bg-image2 {
@@ -78,8 +142,24 @@ iframe {
     font-weight: bold;
     font-family: comfortaa;
     color: #29ABE2;
-    text-align: center;
-    padding-top: 50px;
+    margin: auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    width: 840px;
+    text-indent: 50px;
+}
+
+.client {
+    color: #29ABE2;
+    font-family: raleway;
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.client-p {
+    line-height: 1.6;
+    padding-bottom: 30px;
 }
 
 .short-video {
@@ -88,33 +168,116 @@ iframe {
     column-gap: 40px;
 }
 
+.video1-img {
+    background-image: url(images/vid1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-position: fixed;
+    /* border: 3px solid black; */
+    border-radius: 32px;
+    position: relative;
+    width: 344px;
+    height: 627px;
+    margin: auto;
+}
+
+.video2-img {
+    background-image: url(images/vid2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-position: fixed;
+    /* border: 3px solid black; */
+    border-radius: 32px;
+    position: relative;
+    width: 344px;
+    height: 627px;
+    margin: auto;
+}
+
+.video3-img {
+    background-image: url(images/vid3.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-position: fixed;
+    /* border: 3px solid black; */
+    border-radius: 32px;
+    position: relative;
+    width: 344px;
+    height: 627px;
+    margin: auto;
+}
+
 .help-section {
     text-align: center;
 }
 
-.help-section h5 {
+.help-section-h {
     color: #29ABE2;
+    font-family: comfortaa;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    font-weight: bold;
+    font-size: 30px;
+    width: 521px;
+    margin: auto;
+}
+
+.help-section-p {
+    font-size: 20px;
+    color: #2B426B;
     font-family: raleway;
 }
 
-.sent-message {
-    text-align: center;
+.bookingBtn {
+    width: 466px;
+    font-family: raleway;
+    font-size: 13px;
 }
 
-.input-field {
+/* .video-container {
+    position: relative;
+}
+
+.spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border: 5px solid #ccc;
+    border-top: 5px solid #333;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    display: none;
+} */
+
+.sent-message {
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+.sent-input-field {
     width: 500px;
     border: none;
     border-radius: 100px;
     padding: 20px;
     margin-bottom: 20px;
     font-family: raleway;
+    font-size: 13px;
 }
 
-.form-title {
+.sent-form-title {
     color: #29ABE2;
     font-weight: bold;
     font-size: 30px;
-    font-family: raleway;
+    font-family: comfortaa;
+    padding-bottom: 30px;
+    width: 284px;
+    margin: auto;
 }
 
 .textarea {
@@ -123,62 +286,107 @@ iframe {
 }
 
 .sent-btn {
-    width: 550px;
-}
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    padding-top: 50px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.4);
-}
-
-.modal-content {
-    background-image: url("images/thankyou.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin: auto;
-    padding: 20px;
-    height: 60%;
-    width: 80%;
-    text-align: center;
-    padding-top: 150px;
-}
-
-.modal-title {
-    color: white;
-    font-size: 50px;
-    font-weight: bold;
-    font-family: comfortaa;
-}
-
-.modal-p {
-    color: white;
-    font-size: 25px;
-    font-weight: bold;
-    font-family: comfortaa;
     text-transform: uppercase;
-}
-
-.close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    padding-right: 200px;
-    padding-top: 30px;
-}
-
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
+    border: 1px solid white;
+    width: 540px;
+    height: 61px;
+    border-radius: 100px;
+    background-color: #29ABE2;
+    color: white;
     cursor: pointer;
+    font-family: raleway;
+    font-size: 13px;
+    font-weight: 500px;
 }
+
+
+@media screen and (max-width: 600px) {
+
+    .logo {
+        padding-top: 40px;
+    }
+
+    .heading {
+        font-size: 15px;
+        padding-top: 100px;
+        font-weight: 600;
+    }
+
+    .title {
+        font-size: 20px;
+        line-height: 200%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        width: 322px;
+        margin: auto;
+        text-indent: 10px;
+    }
+
+    .video-bg {
+        width: 383px;
+        height: 242px;
+    }
+
+    .playBtn {
+        width: 38px;
+        height: 38px;
+    }
+
+    #video-frame {
+        width: 300px;
+    }
+
+    .bookBtn {
+        /* width: 263px; */
+        width: 200px;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-indent: 20px;
+        text-align: center;
+    }
+
+    .second-part-title {
+        font-size: 15px;
+        margin: auto;
+        width: 285px;
+        text-align: center;
+        text-indent: 0px;
+    }
+
+    .client {
+        font-size: 12px;
+    }
+
+    .help-section-h {
+        font-size: 15px;
+        width: 266px;
+    }
+
+    .help-section-p {
+        font-size: 12px;
+    }
+
+    .sent-form-title {
+        font-size: 15px;
+        width: 142px;
+    }
+
+    .sent-input-field {
+        width: 348px;
+    }
+
+    .sent-btn {
+        width: 400px;
+
+    }
+}
+
+/* @keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+} */
